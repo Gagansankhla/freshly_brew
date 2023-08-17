@@ -1,0 +1,10 @@
+.whiteOutline {
+    border-color: white !important;
+    border-radius: 30rem !important;
+  }
+  
+  .whiteFocused {
+    border-color: white !important;
+    border-radius: 30rem !important;
+  }
+  
