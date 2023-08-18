@@ -10,9 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import FinanceNews from "../Pages/Finance";
-import Technology from "../Pages/Technology";
-import Sports from "../Pages/Sports";
 import props from "prop-types";
 import * as ReactDOM from "react-dom/client";
 import {
