@@ -8,13 +8,22 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+import FinanceNews from "../Pages/Finance";
+import Technology from "../Pages/Technology";
+import Sports from "../Pages/Sports";
+import props from "prop-types";
+import * as ReactDOM from "react-dom/client";
+import {
+  BrowserRouter as Router,
+  RouterProvider,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
 
-const pages = ["Stars", "Planets", "Astronomy", "Notification"];
+const pages = ["Top News", "Finance", "Technology", "Sports"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -24,7 +33,7 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
+  const handleOpenUserMenu = (event) => {   
     setAnchorElUser(event.currentTarget);
   };
 
@@ -38,7 +47,12 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
-      sx={{ backgroundColor: "#383B3E", height: "100px", paddingLeft: '5rem', paddingRight: '5rem',}}
+      sx={{
+        backgroundColor: "#383B3E",
+        height: "100px",
+        paddingLeft: "5rem",
+        paddingRight: "5rem",
+      }}
       position="static"
     >
       <Container maxWidth="xl">
@@ -53,13 +67,13 @@ function ResponsiveAppBar() {
               fontWeight: 700,
               fontSize: "3rem",
               color: "inherit",
-              textDecoration: "none",  
+              textDecoration: "none",
             }}
           >
             Search
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "", md: "none" }}}>
+          <Box sx={{ flexGrow: 1, display: { xs: "", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -67,7 +81,6 @@ function ResponsiveAppBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              
             >
               <MenuIcon />
             </IconButton>
